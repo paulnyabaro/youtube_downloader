@@ -36,6 +36,7 @@ link.pack()
 
 # Download button
 download = customtkinter.CTkButton(app, text="Download", command=start_download) # Run function
+download.pack(padx=10, pady=10) # .pack is used to make elements show up on the screen
 
 # Run app
 app.mainloop()
