@@ -11,6 +11,7 @@ def start_download():
         video.download()
     except:
         print("Youtube link is invalid")
+        finishLabel.configure(text="Download error!")
 
     finishLabel.configure(text="Downloaded!")
 
