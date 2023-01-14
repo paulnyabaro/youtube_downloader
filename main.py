@@ -9,11 +9,12 @@ def start_download():
         yt_object = YouTube(yt_link)
         video = yt_object.streams.get_highest_resolution()
         video.download()
+        title.configure(text=yt_object.title, text_color="white")
+        finishLabel.configure(text="Downloaded!")
+
     except:
         print("Youtube link is invalid")
-        finishLabel.configure(text="Download error!")
-
-    finishLabel.configure(text="Downloaded!")
+        finishLabel.configure(text="Invalid link or Download error!", text_color="red")
 
 # System settings
 customtkinter.set_appearance_mode("System") # Setting the dark or light mode from the system
