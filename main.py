@@ -40,6 +40,14 @@ link.pack()
 finishLabel = customtkinter.CTkLabel(app, text="")
 finishLabel.pack()
 
+# Progress percentage
+p_percentage = customtkinter.CTkLabel(app, text="0%")
+p_percentage.pack()
+
+progress_bar = customtkinter.CTkProgressBar(app, 400)
+progress_bar.set(0)
+progress_bar.pack(padx=10, pady=10)
+
 # Download button
 download = customtkinter.CTkButton(app, text="Download", command=start_download) # Run function
 download.pack(padx=10, pady=10) # .pack is used to make elements show up on the screen
