@@ -1,0 +1,2 @@
+# For ubuntu, you have to run this command
+sudo apt-get install python3-tk

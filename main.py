@@ -11,3 +11,8 @@ customtkinter.set_default_color_theme("blue")
 # Our app frame
 app = customtkinter.CTk() # Initializing the app
 app.geometry("720x480") # Setting the app size
+app.title("Youtube Downloader")
+
+
+# Run app
+app.mainloop()
