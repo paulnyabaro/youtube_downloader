@@ -14,5 +14,9 @@ app.geometry("720x480") # Setting the app size
 app.title("Youtube Downloader")
 
 
+# Adding UI elements
+title = customtkinter.CTkLabel(app, text="Insert a YouTube link")
+title.pack(padx=10, pady=10) # Padding for x and y
+
 # Run app
 app.mainloop()
