@@ -31,8 +31,8 @@ def on_progress(stream, chunk, bytes_remaining):
     p_percentage.update()
 
 
-# Update progress bar
-progress_bar.set(float(percentage_of_completion))
+    # Update progress bar
+    progress_bar.set(float(percentage_of_completion) / 100)
 
 # Our app frame
 app = customtkinter.CTk() # Initializing the app
