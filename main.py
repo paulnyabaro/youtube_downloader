@@ -6,7 +6,7 @@ from pytube import YouTube
 def start_download():
     try:
         yt_link = link.get()
-        yt_object = YouTube(yt_link)
+        yt_object = YouTube(yt_link, on_progress_callback=on_progress)
         video = yt_object.streams.get_highest_resolution()
         video.download()
         title.configure(text=yt_object.title, text_color="white")
@@ -20,6 +20,19 @@ def start_download():
 customtkinter.set_appearance_mode("System") # Setting the dark or light mode from the system
 customtkinter.set_default_color_theme("blue")
 
+# Adding progress bar
+def on_progress(stream, chunk, bytes_remaining):
+    total_size = stream.filesize
+    bytes_downloaded = total_size - bytes_remaining
+    percentage_of_completion = bytes_downloaded / total_size * 100
+    print(percentage_of_completion)
+    per = str(int(percentage_of_completion))
+    p_percentage.configure(text=per + '%')
+    p_percentage.update()
+
+
+# Update progress bar
+progress_bar.set(float(percentage_of_completion))
 
 # Our app frame
 app = customtkinter.CTk() # Initializing the app
