@@ -13,7 +13,6 @@ def start_download():
         print("Youtube link is invalid")
 
     finishLabel.configure(text="Downloaded!")
-    print("Download complete")
 
 # System settings
 customtkinter.set_appearance_mode("System") # Setting the dark or light mode from the system
