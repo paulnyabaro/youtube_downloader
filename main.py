@@ -18,5 +18,9 @@ app.title("Youtube Downloader")
 title = customtkinter.CTkLabel(app, text="Insert a YouTube link")
 title.pack(padx=10, pady=10) # Padding for x and y
 
+# Link input
+link = customtkinter.CTkEntry(app, width=350, height=40) # app is where to place it -> inside the app
+link.pack()
+
 # Run app
 app.mainloop()
