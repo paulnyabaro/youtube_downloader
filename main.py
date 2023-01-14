@@ -1,4 +1,4 @@
-import tkinter
+import tkinter as tk
 import customtkinter
 from pytube import YouTube
 
@@ -45,7 +45,7 @@ title = customtkinter.CTkLabel(app, text="Insert a YouTube link")
 title.pack(padx=10, pady=10) # Padding for x and y
 
 # Link input
-url_var = tkinter.StringVar() # Getting the value of the link input
+url_var = tk.StringVar() # Getting the value of the link input
 link = customtkinter.CTkEntry(app, width=350, height=40, textvariable=url_var) # app is where to place it -> inside the app
 link.pack()
 
